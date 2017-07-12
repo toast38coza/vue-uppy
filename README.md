@@ -2,6 +2,31 @@
 
 > A vue wrapper for uppy.io
 
+This ia more of a proof of concept than anything production ready .. but it works :).
+
+Usage:
+
+```
+import Uppy from `vue-uppy/src/components/Uppy`
+...
+
+<uppy :with-progress='true' ></uppy>
+```
+
+Events:
+
+* core:upload-progress
+* core:upload-success
+* core:success
+
+Props:
+
+* `with-progress` -> whether or not to show the progress bar
+
+Feel free to just grap `src/components/Uppy.vue` and put it in your project.
+
+
+
 ## Build Setup
 
 ``` bash
