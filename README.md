@@ -4,20 +4,32 @@
 
 This ia more of a proof of concept than anything production ready .. but it works :).
 
-Usage:
+##Installation
+
+You'll need [uppy](http://uppy.io):
+
+```
+npm install --save uppy
+```
+
+##Usage:
 
 ```
 import Uppy from `vue-uppy/src/components/Uppy`
 ...
 
-<uppy :with-progress='true' ></uppy>
+<uppy
+	@core:upload-progress=updateProgressStatus
+	@core:upload-success=imageUploaded
+	@core:success=allImagesUploaded
+	:with-progress='true' ></uppy>
 ```
 
 Events:
 
-* core:upload-progress
-* core:upload-success
-* core:success
+* `core:upload-progress` = sends bytes and totalbytes
+* `core:upload-success` = sends all data about the image, including the url on [tus.io](http://tus.io) where it has been uploaded
+* `core:success` = sends file count
 
 Props:
 
