@@ -4,7 +4,7 @@
 
 This ia more of a proof of concept than anything production ready .. but it works :).
 
-##Installation
+## Installation
 
 You'll need [uppy](http://uppy.io):
 
@@ -12,7 +12,7 @@ You'll need [uppy](http://uppy.io):
 npm install --save uppy
 ```
 
-##Usage:
+## Usage:
 
 ```
 import Uppy from `vue-uppy/src/components/Uppy`
@@ -25,13 +25,13 @@ import Uppy from `vue-uppy/src/components/Uppy`
 	:with-progress='true' ></uppy>
 ```
 
-Events:
+**Events:**
 
 * `core:upload-progress` = sends bytes and totalbytes
 * `core:upload-success` = sends all data about the image, including the url on [tus.io](http://tus.io) where it has been uploaded
 * `core:success` = sends file count
 
-Props:
+**Props:**
 
 * `with-progress` -> whether or not to show the progress bar
 
